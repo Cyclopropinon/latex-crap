@@ -1,0 +1,87 @@
+\maketitle
+
+\tableofcontents
+
+\section{Rectangles \& Circles}
+
+\begin{tikzpicture}
+  \foreach \x in {0,2,...,12} {
+    \foreach \y in {0,2,...,12} {
+      \draw (\x cm, \y cm) rectangle ({\x cm + 2 cm}, {\y cm + 2 cm});
+
+      \draw[rotate around={45:(\x cm, \y cm)}] (\x cm, \y cm) rectangle ({\y cm + 1 cm}, {\x cm + 1 cm});
+
+      \draw[red] ({\x cm + 0.5 cm}, {\y cm + 0.5 cm}) circle ({sqrt(2)/2});
+    }
+  }
+\end{tikzpicture}
+
+\section{Rectangles \& Circles}
+
+\begin{tikzpicture}
+  \foreach \x in {0,2,...,12} {
+    \foreach \y in {0,2,...,12} {
+      \draw (\x cm, \y cm) rectangle ({\x cm + 2 cm}, {\y cm + 2 cm});
+
+      \draw[rotate around={45:(\x cm, \y cm)}] (\x cm, \y cm) rectangle ({\x  + 1 cm}, {\y + 1 cm});
+
+      \draw[red] ({\y + \x cm}, {\x + \y cm}) circle ({sqrt(\x)/2});
+    }
+  }
+\end{tikzpicture}
+
+\section{Rectangles \& Circles}
+
+\begin{tikzpicture}
+  \foreach \x in {0,2,...,12} {
+    \foreach \y in {0,2,...,12} {
+      \draw (\x cm, \y cm) rectangle ({\x cm + 2 cm}, {\y cm + 2 cm});
+
+      \draw[rotate around={\x * \y:(\x cm, \y cm)}] (\x cm, \y cm) rectangle ({\x  + 1 cm}, {\y + 1 cm});
+
+      \draw[red] ({\y + \x cm}, {\x + \y cm}) circle ({sqrt(\x)/2});
+    }
+  }
+\end{tikzpicture}
+
+\section{Rectangles \& Circles}
+
+\begin{tikzpicture}
+  \foreach \x in {0,2,...,12} {
+    \foreach \y in {0,2,...,12} {
+      \draw (\x cm, \y cm) rectangle ({\y + 2 cm}, {\x + 2 cm});
+
+      \draw[rotate around={\x * \y:(\x cm, \y cm)}] (\x cm, \y cm) rectangle ({\x  + 1 cm}, {\y + 1 cm});
+
+      \draw[red] ({\y + \x cm}, {\x + \y cm}) circle ({sqrt(\x)/2});
+    }
+  }
+\end{tikzpicture}
+
+\section{Rectangles \& Circles}
+
+\begin{tikzpicture}
+  \foreach \x in {0,2,...,12} {
+    \foreach \y in {0,2,...,12} {
+      \draw (\x cm, \y cm) rectangle ({sqrt(\y cm) + 2 cm}, {sqrt(\x cm) + 2 cm});
+
+      \draw[rotate around={\x * \y:(\x cm, \y cm)}] (\x cm, \y cm) rectangle ({\x  + 1 cm}, {\y + 1 cm});
+
+      \draw[red] ({\y + \x cm}, {\x + \y cm}) circle ({sqrt(\x)/2});
+    }
+  }
+\end{tikzpicture}
+
+\section{Rectangles \& Circles}
+
+\begin{tikzpicture}
+  \foreach \x in {0,2,...,12} {
+    \foreach \y in {0,2,...,12} {
+      \draw (\x cm, \y cm) rectangle ({sqrt(\y cm * 9) + 2 cm}, {sqrt(\x cm * 9) + 2 cm});
+
+      \draw[rotate around={\x * \y:(\x cm, \y cm)}, lime] (\x cm, \y cm) rectangle ({\x  + 1 cm}, {\y + 1 cm});
+
+      \draw[red] ({\y + \x cm}, {\x + \y cm}) circle ({sqrt(\x)/2});
+    }
+  }
+\end{tikzpicture}
